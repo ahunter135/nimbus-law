@@ -1,0 +1,7 @@
+{
+  "name": "nimbus-law",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
