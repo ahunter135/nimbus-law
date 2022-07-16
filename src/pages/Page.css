@@ -1,0 +1,92 @@
+.toolbar {
+    --background: #316094;
+    --color: white;
+}
+
+.logo {
+
+}
+
+.nimbus {
+    top: 6px;
+    font-weight: 300;
+    font-size: 24px;
+    bottom: 1px;
+    left: 6px;
+    position: absolute;
+    font-family: 'Helvetica Neue';
+    line-height: 29px;
+    color: #94C0F0;
+}
+
+.legacy {
+    top: 10px;
+    font-weight: 300;
+    font-size: 16px;
+    bottom: 7px;
+    left: 92px;
+    position: absolute;
+    font-family: 'Helvetica Neue';
+    line-height: 10px;
+    color: #94C0F0;
+}
+
+.menu {
+    --color: #94C0F0;
+}
+
+ion-content {
+    --background: #f3f3f3;
+}
+
+.blue-box {
+    position: absolute;
+left: 0%;
+right: 0%;
+top: 54%;
+bottom: 0%;
+
+background: #316094;
+}
+
+.tree-icon {
+    width: 120px;
+    display: block;
+    margin: auto;
+}
+
+.dashboard-card {
+    position: absolute;
+    z-index: 99;
+    margin: auto;
+    width: 90%;
+    top: 0;
+    height: 450px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.card-title {
+    font-family: 'Heuristica';
+font-style: normal;
+font-weight: 400;
+font-size: 40px;
+line-height: 40px;
+/* or 100% */
+
+text-align: center;
+}
+
+.card-text {
+    font-family: 'Lato';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 26px;
+/* or 130% */
+
+text-align: center;
+margin-top: 25px;
+margin-bottom: 25px;
+}

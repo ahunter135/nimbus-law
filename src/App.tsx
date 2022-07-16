@@ -22,9 +22,13 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import Dashboard from './pages/Dashboard/dashboard';
+import QuickRead from './pages/QuickRead/quickread';
+import InfoForm from './pages/InfoForm/infoForm';
 
-setupIonicReact();
-
+setupIonicReact({
+  mode: 'ios',
+});
 const App: React.FC = () => {
   return (
     <IonApp>
@@ -33,10 +37,19 @@ const App: React.FC = () => {
           <Menu />
           <IonRouterOutlet id="main">
             <Route path="/" exact={true}>
-              <Redirect to="/page/Inbox" />
+              <Redirect to="/page/login" />
             </Route>
             <Route path="/page/:name" exact={true}>
               <Page />
+            </Route>
+            <Route path="/info-form">
+              <InfoForm />
+            </Route>
+            <Route path="/quick-read">
+              <QuickRead />
+            </Route>
+            <Route path="/dashboard">
+              <Dashboard />
             </Route>
           </IonRouterOutlet>
         </IonSplitPane>

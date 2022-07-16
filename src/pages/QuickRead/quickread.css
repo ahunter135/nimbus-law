@@ -1,0 +1,24 @@
+.page-break {
+
+    font-family: 'Heuristica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 38px;
+    text-align: center;
+}
+
+.card-modal-text {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 40px;
+    /* or 182% */
+
+    text-align: center;
+}
+
+.background {
+    --background: #f3f3f3;
+}
