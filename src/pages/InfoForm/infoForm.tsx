@@ -2,7 +2,10 @@ import { IonButton, IonButtons, IonCard, IonCardContent, IonCardHeader, IonCheck
 import { chatbox, checkmark, checkmarkCircle, chevronForward, close, closeCircle, closeCircleOutline } from 'ionicons/icons';
 import { useRef, useState } from 'react';
 import { useParams } from 'react-router';
-import './infoForm.css';
+import Footer from '../../components/footer';
+import Header from '../../components/header';
+import WelcomeBar from '../../components/WelcomeBar';
+import '../Page.css';
 
 const InfoForm: React.FC = () => {
     const modal = useRef<HTMLIonModalElement>(null);
@@ -21,23 +24,10 @@ const InfoForm: React.FC = () => {
     }
     return (
         <IonPage>
-            <IonHeader>
-                <IonToolbar className='toolbar'>
-                    <IonButtons slot="end">
-                        <IonMenuButton className="menu" />
-                        <IonButton className="menu">
-                            <IonIcon slot="icon-only" style={{ fontSize: '20px' }} icon={chatbox} />
-                        </IonButton>
-                    </IonButtons>
-                    <IonTitle className='logo'><span className="nimbus">nimbus</span> <span className='legacy'>legacy<br />guide</span></IonTitle>
-                </IonToolbar>
-            </IonHeader>
+            <Header />
 
             <IonContent fullscreen className='background'>
-                <IonToolbar className='welcome-bar'>
-                    <div className='welcome-text'>Welcome Back</div>
-                    <div className='user-name'>Michael</div>
-                </IonToolbar>
+                <WelcomeBar />
                 <IonCard style={{ marginTop: "85px", background: "#d9dfe3" }}>
                     <IonCardContent>
                         <IonGrid>
@@ -202,23 +192,7 @@ const InfoForm: React.FC = () => {
                     </IonList>
                 </div>
             </IonContent>
-            <IonFooter>
-                <IonToolbar className='background'>
-                    <IonGrid>
-                        <IonRow style={{ display: "flex", alignItems: "center" }}>
-                            <IonCol size="3">
-                                <img className="footer-image" src='assets/logos/attorney.svg' />
-                            </IonCol>
-                            <IonCol>
-                                YOUR TEAM<br />
-                                <strong>John C. Doe</strong><br />
-                                Attorney at Law, Doe and Partners<br />
-                                johnd@estateplans.com
-                            </IonCol>
-                        </IonRow>
-                    </IonGrid>
-                </IonToolbar>
-            </IonFooter>
+            <Footer />
         </IonPage>
     );
 };

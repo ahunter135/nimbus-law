@@ -1,7 +1,10 @@
 import { IonButton, IonButtons, IonCard, IonCardContent, IonCardHeader, IonCol, IonContent, IonFooter, IonGrid, IonHeader, IonIcon, IonImg, IonMenuButton, IonPage, IonRow, IonTitle, IonToolbar } from '@ionic/react';
 import { chatbox, checkmark, checkmarkCircle, chevronForward } from 'ionicons/icons';
 import { useParams } from 'react-router';
-import './dashboard.css';
+import Footer from '../../components/footer';
+import Header from '../../components/header';
+import WelcomeBar from '../../components/WelcomeBar';
+import '../Page.css';
 
 const Dashboard: React.FC = () => {
 
@@ -9,23 +12,10 @@ const Dashboard: React.FC = () => {
 
     return (
         <IonPage>
-            <IonHeader>
-                <IonToolbar className='toolbar'>
-                    <IonButtons slot="end">
-                        <IonMenuButton className="menu" />
-                        <IonButton className="menu">
-                            <IonIcon slot="icon-only" style={{ fontSize: '20px' }} icon={chatbox} />
-                        </IonButton>
-                    </IonButtons>
-                    <IonTitle className='logo'><span className="nimbus">nimbus</span> <span className='legacy'>legacy<br />guide</span></IonTitle>
-                </IonToolbar>
-            </IonHeader>
+            <Header />
 
             <IonContent fullscreen className='background'>
-                <IonToolbar className='welcome-bar'>
-                    <div className='welcome-text'>Welcome Back</div>
-                    <div className='user-name'>Michael</div>
-                </IonToolbar>
+                <WelcomeBar />
                 <IonCard style={{ marginTop: "85px" }}>
                     <IonCardHeader>
                         <IonRow class='header-row'>
@@ -56,7 +46,7 @@ const Dashboard: React.FC = () => {
                     <IonCardContent>
                         <IonGrid>
                             <IonRow>
-                                <IonCol size="2">
+                                <IonCol size="2" className='card-icon'>
                                     <img className="card-image" src='assets/logos/planVault.svg' />
                                 </IonCol>
                                 <IonCol>
@@ -89,7 +79,7 @@ const Dashboard: React.FC = () => {
                     <IonCardContent>
                         <IonGrid>
                             <IonRow>
-                                <IonCol size="2">
+                                <IonCol size="2" className='card-icon'>
                                     <img className="card-image" src='assets/logos/treeIcon.svg' />
                                 </IonCol>
                                 <IonCol>
@@ -104,7 +94,7 @@ const Dashboard: React.FC = () => {
                     <IonCardContent>
                         <IonGrid>
                             <IonRow>
-                                <IonCol size="2">
+                                <IonCol size="2" className='card-icon'>
                                     <img className="card-image" src='assets/logos/communication.svg' />
                                 </IonCol>
                                 <IonCol>
@@ -120,7 +110,7 @@ const Dashboard: React.FC = () => {
                     <IonCardContent>
                         <IonGrid>
                             <IonRow>
-                                <IonCol size="2">
+                                <IonCol size="2" className='card-icon'>
                                     <img className="card-image" src='assets/logos/compass.svg' />
                                 </IonCol>
                                 <IonCol>
@@ -132,23 +122,7 @@ const Dashboard: React.FC = () => {
                     </IonCardContent>
                 </IonCard>
             </IonContent>
-            <IonFooter >
-                <IonToolbar className='background'>
-                    <IonGrid>
-                        <IonRow style={{ display: "flex", alignItems: "center" }}>
-                            <IonCol size="3">
-                                <img className="footer-image" src='assets/logos/attorney.svg' />
-                            </IonCol>
-                            <IonCol>
-                                YOUR TEAM<br />
-                                <strong>John C. Doe</strong><br />
-                                Attorney at Law, Doe and Partners<br />
-                                johnd@estateplans.com
-                            </IonCol>
-                        </IonRow>
-                    </IonGrid>
-                </IonToolbar>
-            </IonFooter>
+            <Footer />
         </IonPage>
     );
 };

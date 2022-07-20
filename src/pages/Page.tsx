@@ -1,7 +1,7 @@
 import { IonButton, IonButtons, IonCard, IonCardContent, IonContent, IonHeader, IonIcon, IonImg, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import { chatbox } from 'ionicons/icons';
 import { useParams } from 'react-router';
-import ExploreContainer from '../components/ExploreContainer';
+import Header from '../components/header';
 import './Page.css';
 
 const Page: React.FC = () => {
@@ -10,17 +10,7 @@ const Page: React.FC = () => {
 
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar className='toolbar'>
-          <IonButtons slot="end">
-            <IonMenuButton className="menu" />
-            <IonButton className="menu">
-              <IonIcon slot="icon-only" style={{fontSize: '20px'}} icon={chatbox} />
-            </IonButton>
-          </IonButtons>
-          <IonTitle className='logo'><span className="nimbus">nimbus</span> <span className='legacy'>legacy<br />guide</span></IonTitle>
-        </IonToolbar>
-      </IonHeader>
+      <Header />
 
       <IonContent fullscreen>
         <IonCard class="dashboard-card">
