@@ -32,8 +32,8 @@ const Dashboard: React.FC = () => {
                                 <IonCol><span className='card-body'>Power of Attorney</span></IonCol>
                             </IonRow>
                             <IonRow>
-                                <IonCol><span className='card-body'>Pour Over Will</span></IonCol>
-                                <IonCol><span className='card-body'>Guardianship</span></IonCol>
+                                <IonCol><span className='card-body no-check'>Pour Over Will</span></IonCol>
+                                <IonCol><span className='card-body no-check'>Guardianship</span></IonCol>
                             </IonRow>
                             <IonRow>
                                 <IonCol><span className='card-body'><IonIcon style={{ color: '#7ad855', fontSize: '18px' }} icon={checkmarkCircle}></IonIcon>Medical Directive</span></IonCol>

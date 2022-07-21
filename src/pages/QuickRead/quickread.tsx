@@ -74,7 +74,7 @@ const QuickRead: React.FC = () => {
                     </IonContent>
                 </IonModal>
             </IonContent>
-            <Footer children='transparentBackground'/>
+            <Footer children='footerBackground25'/>
         </IonPage>
     );
 };

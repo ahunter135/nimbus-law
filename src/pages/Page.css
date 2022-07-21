@@ -174,6 +174,12 @@ ion-content {
     --background: inherit !important;
 }
 
+.footerBackground25 {
+    --border-width: 0 !important;
+    --border: none !important;
+    --background:#e7f0f4 !important;
+}
+
 .card-modal-text {
     font-family: 'Lato';
     font-style: normal;
@@ -278,7 +284,9 @@ ion-content {
     display: flex;
     align-items: center;
 }
-
+.card-body.no-check {
+    margin-left: 19px;
+}
 .info-form-text {
     font-family: 'Heuristica';
     font-style: normal;
