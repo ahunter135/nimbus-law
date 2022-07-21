@@ -23,27 +23,27 @@ const InfoForm: React.FC = () => {
         setTitle(title);
     }
     return (
-        <IonPage>
+        <IonPage className='background'>
             <Header />
 
             <IonContent fullscreen className='background'>
                 <WelcomeBar />
-                <IonCard style={{ marginTop: "85px", background: "#d9dfe3" }}>
+                <IonCard style={{ marginTop: "85px", background: "#A2C5D340" }}>
                     <IonCardContent>
                         <IonGrid>
                             <IonRow style={{ display: 'flex', alignItems: 'center' }}>
                                 <IonCol size="3">
-                                    <img src='assets/logos/quickread.svg' />
+                                    <img width="70px" src='assets/logos/quickRead.svg' />
                                 </IonCol>
                                 <IonCol>
-                                    <p className='card2-text'>Six important objectives in creating your estate plan.</p>
+                                    <p className='info-form-text'>Six important objectives in creating your estate plan.</p>
                                 </IonCol>
                             </IonRow>
                         </IonGrid>
                     </IonCardContent>
                 </IonCard>
                 <div className='form'>
-                    <IonLabel>Personal Information</IonLabel>
+                    <IonLabel className='form-label'>Personal Information</IonLabel>
                     <IonList>
                         <IonGrid>
                             <IonRow>

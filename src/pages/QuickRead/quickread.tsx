@@ -11,28 +11,30 @@ const QuickRead: React.FC = () => {
     const modal = useRef<HTMLIonModalElement>(null);
     const page = useRef(null);
     const [title, setTitle] = useState("");
-
+    const [selectedIcon, setSelectedIcon] = useState("");
     const [presentingElement, setPresentingElement] = useState<HTMLElement | null>(null);
 
     function dismiss() {
         modal.current?.dismiss();
     }
-    const showModal = (event: any) => {
+    const showModal = (event: any, icon: string) => {
         let title = event.target.innerHTML;
         modal.current?.present();
         setTitle(title);
+        console.log(icon);
+        setSelectedIcon(icon);
     }
     return (
-        <IonPage>
+        <IonPage className='backgroundTwo'>
             <Header />
-            <IonContent fullscreen className='background'>
+            <IonContent fullscreen className='backgroundTwo'>
                 <WelcomeBar />
                 <IonCard style={{ marginTop: "85px", background: "transparent", dropShadow: 'none', boxShadow: 'none' }}>
                     <IonCardContent>
                         <IonGrid>
                             <IonRow style={{ display: 'flex', alignItems: 'center' }}>
                                 <IonCol size="3">
-                                    <img src='assets/logos/quickRead.svg' />
+                                    <img width="70px" src='assets/logos/quickRead.svg' />
                                 </IonCol>
                                 <IonCol>
                                     <p className='card2-text'>Six important objectives in creating your estate plan.</p>
@@ -44,12 +46,12 @@ const QuickRead: React.FC = () => {
                 <div className='page-break'>
                     <p>Choices for a lifetime</p>
                     <div style={{ textAlign: 'left', marginLeft: '10%' }}>
-                        <h2><a onClick={(e) => showModal(e)}>Provide for loved ones</a></h2>
-                        <h2><a onClick={(e) => showModal(e)}>Minimize taxes</a></h2>
-                        <h2><a onClick={(e) => showModal(e)}>Protext your assets from creditors</a></h2>
-                        <h2><a onClick={(e) => showModal(e)}>Advance medical directives</a></h2>
-                        <h2><a onClick={(e) => showModal(e)}>Asset management</a></h2>
-                        <h2><a onClick={(e) => showModal(e)}>Guardianship</a></h2>
+                        <h2><a onClick={(e) => showModal(e, 'assets/logos/caring.svg')}>Provide for loved ones</a></h2>
+                        <h2><a onClick={(e) => showModal(e, 'assets/logos/caring.svg')}>Minimize taxes</a></h2>
+                        <h2><a onClick={(e) => showModal(e, 'assets/logos/caring.svg')}>Protext your assets from creditors</a></h2>
+                        <h2><a onClick={(e) => showModal(e, 'assets/logos/caring.svg')}>Advance medical directives</a></h2>
+                        <h2><a onClick={(e) => showModal(e, 'assets/logos/caring.svg')}>Asset management</a></h2>
+                        <h2><a onClick={(e) => showModal(e, 'assets/logos/caring.svg')}>Guardianship</a></h2>
                     </div>
                 </div>
                 <IonModal ref={modal} trigger="open-modal" presentingElement={presentingElement!}>
@@ -61,8 +63,8 @@ const QuickRead: React.FC = () => {
                         </IonToolbar>
                     </IonHeader>
                     <IonContent className="ion-padding">
-                        <div style={{ position: 'absolute', top: '10%', left: '40%' }}>
-                            <img src='assets/logos/treeicon.svg' />
+                        <div style={{ display: 'flex', justifyContent: 'center' }}>
+                            <img width="130px" src={selectedIcon} />
                         </div>
                         <div className='card-modal-text' style={{ position: 'absolute', top: '30%', }}>
                             <span style={{ fontSize: '25px', color: '#316094' }}>{title}</span><br />
@@ -72,7 +74,7 @@ const QuickRead: React.FC = () => {
                     </IonContent>
                 </IonModal>
             </IonContent>
-            <Footer />
+            <Footer children='transparentBackground'/>
         </IonPage>
     );
 };

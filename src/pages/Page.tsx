@@ -18,7 +18,7 @@ const Page: React.FC = () => {
             <IonImg src="assets/logos/treeIcon.svg" className='tree-icon' />
             <div className='card-title'>Welcome to Nimbus Law</div>
             <div className='card-text'><span style={{ color: "#316094" }}>We provide your most important estate plan asset—confidence. </span><br /> Lets get started by answering a few questions to learn about your life, your wishes and needs.</div>
-
+            <div className='start-btn'><IonButton>Let's Get Started</IonButton></div>
           </IonCardContent>
         </IonCard>
         <div className='blue-box'>

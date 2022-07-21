@@ -2,10 +2,14 @@
 import { IonButton, IonButtons, IonCol, IonFooter, IonGrid, IonHeader, IonIcon, IonMenuButton, IonRow, IonTitle, IonToolbar } from "@ionic/react";
 import { chatbox } from "ionicons/icons";
 
-const Footer: React.FC = () => {
+interface ClassNameProp {
+    class: string
+}
+const Footer: React.FC = (props) => {
+    console.log(props.children);
     return (
-        <IonFooter>
-            <IonToolbar className='background'>
+        <IonFooter className={props.children ? props.children.toString() : ""}>
+            <IonToolbar className={props.children ? props.children.toString() : "footerBackground"}>
                 <IonGrid>
                     <IonRow style={{ display: "flex", alignItems: "center" }}>
                         <IonCol size="3">

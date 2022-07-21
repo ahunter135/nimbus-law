@@ -3,16 +3,14 @@
     --color: white;
 }
 
-.logo {
-
-}
+.logo {}
 
 .nimbus {
     top: 6px;
     font-weight: 300;
-    font-size: 24px;
+    font-size: 22px;
     bottom: 1px;
-    left: 6px;
+    left: 20px;
     position: absolute;
     font-family: 'Helvetica Neue';
     line-height: 29px;
@@ -22,7 +20,7 @@
 .legacy {
     top: 10px;
     font-weight: 300;
-    font-size: 16px;
+    font-size: 14px;
     bottom: 7px;
     left: 92px;
     position: absolute;
@@ -41,12 +39,12 @@ ion-content {
 
 .blue-box {
     position: absolute;
-left: 0%;
-right: 0%;
-top: 54%;
-bottom: 0%;
+    left: 0%;
+    right: 0%;
+    top: 54%;
+    bottom: 0%;
 
-background: #316094;
+    background: #316094;
 }
 
 .tree-icon {
@@ -54,13 +52,20 @@ background: #316094;
     display: block;
     margin: auto;
 }
+.start-btn {
+    text-align: center;
+    
+}
 
+.start-btn ion-button {
+    --background: #316094;
+}
 .dashboard-card {
     position: absolute;
     z-index: 99;
     margin: auto;
     width: 90%;
-    top: 0;
+    top: -10%;
     height: 450px;
     right: 0;
     bottom: 0;
@@ -69,35 +74,38 @@ background: #316094;
 
 .card-title {
     font-family: 'Heuristica';
-font-style: normal;
-font-weight: 400;
-font-size: 40px;
-line-height: 40px;
-/* or 100% */
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 40px;
+    /* or 100% */
 
-text-align: center;
+    text-align: center;
 }
 
 .card-text {
     font-family: 'Lato';
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: 26px;
-/* or 130% */
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    /* or 130% */
 
-text-align: center;
-margin-top: 25px;
-margin-bottom: 25px;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 .form {
-    width: 95%; 
+    width: 95%;
     margin-left: 5px;
+    margin-right: 5px;
 }
+
 .form ion-list {
     background: transparent;
 }
+
 .form ion-item {
     --background: transparent;
     border: none;
@@ -124,20 +132,46 @@ margin-bottom: 25px;
     --border: none;
 }
 
-
+.form .form-label {
+    margin-left: 13px;
+}
 .form ion-label {
     overflow: initial;
     white-space: nowrap;
 }
 
 .page-break {
-
     font-family: 'Heuristica';
     font-style: normal;
     font-weight: 400;
     font-size: 36px;
     line-height: 38px;
     text-align: center;
+
+}
+
+.page-break a {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 40px;
+    /* or 182% */
+
+
+    color: #316094;
+}
+
+.transparentBackground {
+    --border-width: 0 !important;
+    --border: none !important;
+    --background: transparent
+}
+
+.footerBackground {
+    --border-width: 0 !important;
+    --border: none !important;
+    --background: inherit !important;
 }
 
 .card-modal-text {
@@ -155,6 +189,10 @@ margin-bottom: 25px;
     --background: #f3f3f3;
 }
 
+.backgroundTwo {
+    --background: #A2C5D340;
+}
+
 .welcome-bar {
     height: 75px;
     position: absolute;
@@ -169,7 +207,7 @@ margin-bottom: 25px;
     font-weight: 400;
     font-size: 11px;
     line-height: 13px;
-
+    margin-left: 13px;
     color: #FFFFFF;
 }
 
@@ -179,7 +217,7 @@ margin-bottom: 25px;
     font-weight: 400;
     font-size: 32px;
     line-height: 40px;
-
+    margin-left: 13px;
     color: #FFFFFF;
 }
 
@@ -241,36 +279,54 @@ margin-bottom: 25px;
     align-items: center;
 }
 
-.card2-text {
-    font-family: 'Lato';
+.info-form-text {
+    font-family: 'Heuristica';
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.card-2-text-second {
+    font-family: 'Heuristica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px !important;
+    line-height: 24px;
 
     color: #000000;
 }
 
-.card2-text.title {
-    font-family: 'Lato';
+.card2-text {
+    font-family: 'Heuristica';
     font-style: normal;
     font-weight: 400;
-    font-size: 24px;
-    line-height: 22px;
+    font-size: 20px !important;
+    line-height: 24px;
+
+    color: #000000;
+}
+
+.card-2-text-second.title {
+    font-family: 'Heuristica';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px !important;
+    line-height: 24px;
 
     color: #000000;
 }
 
 .card-image {
-    max-width: 55px;
-    min-width: 55px;
+    max-width: 75px;
+    min-width: 75px;
 }
 
 .card-icon {
     display: flex;
-    flex-direction: column;
+    justify-content: flex-end;
     align-items: center;
-    justify-content: center;
+    flex-direction: column-reverse;
 }
 
 .align-center {
@@ -292,6 +348,4 @@ margin-bottom: 25px;
     border-radius: 16px;
 }
 
-.footer-image {
-    
-}
+.footer-image {}

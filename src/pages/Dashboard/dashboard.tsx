@@ -11,7 +11,7 @@ const Dashboard: React.FC = () => {
     const { name } = useParams<{ name: string; }>();
 
     return (
-        <IonPage>
+        <IonPage className='background'>
             <Header />
 
             <IonContent fullscreen className='background'>
@@ -19,7 +19,7 @@ const Dashboard: React.FC = () => {
                 <IonCard style={{ marginTop: "85px" }}>
                     <IonCardHeader>
                         <IonRow class='header-row'>
-                            <IonCol size="5"><span className='estate'>Your Estate Plan</span></IonCol>
+                            <IonCol size="5"><span className='estate title'>Your Estate Plan</span></IonCol>
                             <IonCol size="5"><span className='session'>last session - 10.24.22</span></IonCol>
                             <IonCol size="2"><span className='finished'><IonIcon style={{ color: '#7ad855', fontSize: '18px' }} icon={checkmarkCircle}></IonIcon>finished</span></IonCol>
                         </IonRow>
@@ -46,12 +46,12 @@ const Dashboard: React.FC = () => {
                     <IonCardContent>
                         <IonGrid>
                             <IonRow>
-                                <IonCol size="2" className='card-icon'>
+                                <IonCol size="3" className='card-icon'>
                                     <img className="card-image" src='assets/logos/planVault.svg' />
                                 </IonCol>
                                 <IonCol>
-                                    <h3 className='card2-text title'>Your PlanVault</h3>
-                                    <p className='card2-text'>Nimbus PlanVault is a digital, secured safebox for your Estate Plan documents. Your trusted executors and beneficiaries can trust your latest wishes are here.</p>
+                                    <h3 className='card-2-text-second title'>Your PlanVault</h3>
+                                    <p className='card-2-text-second'>Nimbus PlanVault is a digital, secured safebox for your Estate Plan documents. Your trusted executors and beneficiaries can trust your latest wishes are here.</p>
                                 </IonCol>
                             </IonRow>
                         </IonGrid>
@@ -79,12 +79,12 @@ const Dashboard: React.FC = () => {
                     <IonCardContent>
                         <IonGrid>
                             <IonRow>
-                                <IonCol size="2" className='card-icon'>
+                                <IonCol size="3" className='card-icon'>
                                     <img className="card-image" src='assets/logos/treeIcon.svg' />
                                 </IonCol>
                                 <IonCol>
-                                    <h3 className='card2-text title'>Your Plan Explained</h3>
-                                    <p className='card2-text'>Your estate plan and process guide visualized in a flowchart that will keep you and your closest advisors up to date. We are always available to discuss options and answer questions.</p>
+                                    <h3 className='card-2-text-second title'>Your Plan Explained</h3>
+                                    <p className='card-2-text-second'>Your estate plan and process guide visualized in a flowchart that will keep you and your closest advisors up to date. We are always available to discuss options and answer questions.</p>
                                 </IonCol>
                             </IonRow>
                         </IonGrid>
@@ -94,12 +94,12 @@ const Dashboard: React.FC = () => {
                     <IonCardContent>
                         <IonGrid>
                             <IonRow>
-                                <IonCol size="2" className='card-icon'>
+                                <IonCol size="3" className='card-icon'>
                                     <img className="card-image" src='assets/logos/communication.svg' />
                                 </IonCol>
                                 <IonCol>
-                                    <h3 className='card2-text title'>Communications Center</h3>
-                                    <p className='card2-text'>My contacts and important instructions.</p>
+                                    <h3 className='card-2-text-second title'>Communications Center</h3>
+                                    <p className='card-2-text-second'>My contacts and important instructions.</p>
                                     <p><strong>Contacts <IonIcon icon={chevronForward}></IonIcon></strong></p>
                                 </IonCol>
                             </IonRow>
@@ -110,12 +110,12 @@ const Dashboard: React.FC = () => {
                     <IonCardContent>
                         <IonGrid>
                             <IonRow>
-                                <IonCol size="2" className='card-icon'>
+                                <IonCol size="3" className='card-icon'>
                                     <img className="card-image" src='assets/logos/compass.svg' />
                                 </IonCol>
                                 <IonCol>
-                                    <h3 className='card2-text title'>Resource Guide</h3>
-                                    <p className='card2-text'>Information, articles and expert advice on the building blocks of your estate plan.</p>
+                                    <h3 className='card-2-text-second title'>Resource Guide</h3>
+                                    <p className='card-2-text-second'>Information, articles and expert advice on the building blocks of your estate plan.</p>
                                 </IonCol>
                             </IonRow>
                         </IonGrid>
