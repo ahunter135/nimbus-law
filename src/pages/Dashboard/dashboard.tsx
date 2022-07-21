@@ -60,7 +60,7 @@ const Dashboard: React.FC = () => {
                 <IonCard>
                     <IonCardHeader>
                         <div className='align-center'>
-                            <IonIcon style={{ color: '#7ad855', fontSize: '30px' }} icon={checkmarkCircle}></IonIcon><span className='header'>Your To Do List</span>
+                            <IonIcon style={{ color: '#7ad855', fontSize: '30px' }} icon={checkmarkCircle}></IonIcon><span className='card-2-text-second title'>Your To Do List</span>
                         </div>
                     </IonCardHeader>
                     <IonCardContent>
