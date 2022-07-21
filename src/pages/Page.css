@@ -264,9 +264,10 @@ ion-content {
     font-size: 12px;
     line-height: 12px;
     /* identical to box height */
-
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     white-space: nowrap;
-    text-align: center;
     color: #000000;
 }
 
@@ -277,12 +278,9 @@ ion-content {
     font-size: 15px;
     line-height: 30px;
     /* identical to box height */
-
-    white-space: nowrap;
     text-align: center;
     color: #316094;
-    display: flex;
-    align-items: center;
+    ;
 }
 .card-body.no-check {
     margin-left: 19px;

@@ -21,23 +21,29 @@ const Dashboard: React.FC = () => {
                         <IonRow class='header-row'>
                             <IonCol size="5"><span className='estate title'>Your Estate Plan</span></IonCol>
                             <IonCol size="5"><span className='session'>last session - 10.24.22</span></IonCol>
-                            <IonCol size="2"><span className='finished'><IonIcon style={{ color: '#7ad855', fontSize: '18px' }} icon={checkmarkCircle}></IonIcon>finished</span></IonCol>
+                            <IonCol size="2"><span className='finished'><IonIcon style={{ color: '#7ad855', fontSize: '18px !important', minWidth: '18px' }} icon={checkmarkCircle}></IonIcon>finished</span></IonCol>
                         </IonRow>
 
                     </IonCardHeader>
                     <IonCardContent>
                         <IonGrid>
                             <IonRow>
-                                <IonCol><span className='card-body'><IonIcon style={{ color: '#7ad855', fontSize: '18px' }} icon={checkmarkCircle}></IonIcon>Revocable Living Trust</span></IonCol>
-                                <IonCol><span className='card-body'>Power of Attorney</span></IonCol>
+                                <IonCol size='1'><IonIcon style={{ color: '#7ad855', fontSize: '18px' }} icon={checkmarkCircle}></IonIcon></IonCol>
+                                <IonCol size='5'><span className='card-body'>Revocable Living Trust</span></IonCol>
+                                <IonCol size='1'><IonIcon style={{ color: '#7ad855', fontSize: '18px' }} icon={checkmarkCircle}></IonIcon></IonCol>
+                                <IonCol size='5'><span className='card-body'>Power of Attorney</span></IonCol>
                             </IonRow>
                             <IonRow>
-                                <IonCol><span className='card-body no-check'>Pour Over Will</span></IonCol>
-                                <IonCol><span className='card-body no-check'>Guardianship</span></IonCol>
+                                <IonCol size='1'></IonCol>
+                                <IonCol size='5'><span className='card-body'>Pour Over Will</span></IonCol>
+                                <IonCol size='1'></IonCol>
+                                <IonCol size='5'><span className='card-body'>Guardianship</span></IonCol>
                             </IonRow>
                             <IonRow>
-                                <IonCol><span className='card-body'><IonIcon style={{ color: '#7ad855', fontSize: '18px' }} icon={checkmarkCircle}></IonIcon>Medical Directive</span></IonCol>
-                                <IonCol><span className='card-body'>Funding Guidance</span></IonCol>
+                                <IonCol size='1'><IonIcon style={{ color: '#7ad855', fontSize: '18px' }} icon={checkmarkCircle}></IonIcon></IonCol>
+                                <IonCol size='5'><span className='card-body'>Medical Directive</span></IonCol>
+                                <IonCol size='1'><IonIcon style={{ color: '#7ad855', fontSize: '18px' }} icon={checkmarkCircle}></IonIcon></IonCol>
+                                <IonCol size='5'><span className='card-body'>Funding Guidance</span></IonCol>
                             </IonRow>
                         </IonGrid>
                     </IonCardContent>
